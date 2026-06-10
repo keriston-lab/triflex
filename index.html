@@ -302,6 +302,33 @@
             .nav-container { flex-direction: column; gap: 15px; text-align: center; }
             .produtos-grid { grid-template-columns: 1fr; }
         }
+
+body {
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg); /* Levemente inclinado para dar dinamismo */
+    width: 70vw; /* Ocupa 70% da largura da tela */
+    height: 70vh;
+    background-image: url('logo1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.03; /* Extremamente sutil para não atrapalhar a leitura dos textos */
+    z-index: -1; /* Garante que fique atrás de todo o conteúdo */
+    pointer-events: none; /* Evita que o usuário clique no fundo por engano */
+}
+
+/* Garante que os cards e seções fiquem transparentes ou flutuem bem sobre o fundo */
+.produtos-section, .vendedor-section {
+    position: relative;
+    z-index: 1;
+}
     </style>
 </head>
 <body>
