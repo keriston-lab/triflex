@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triflex Brasil | Componentes para Cadeiras</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --cor-principal: #000000;
+            --cor-destaque: #E50914; /* Vermelho esportivo/dinâmico baseado no X */
+            --cor-fundo: #f9f9f9;
+            --cor-texto: #333333;
+            --cor-suave: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.6;
+        }
+
+        /* Header / Navegação */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo img {
+            height: 45px; /* Ajuste conforme o arquivo original */
+            display: block;
+        }
+
+        .btn-contato-topo {
+            background-color: var(--cor-destaque);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: transform 0.2s, background-color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-contato-topo:hover {
+            background-color: #b3070f;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section (Introdução) */
+        .hero {
+            background: linear-gradient(135deg, #111 0%, #222 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(90deg, var(--cor-principal) 0%, var(--cor-destaque) 50%, var(--cor-principal) 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            font-style: italic;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            color: #ccc;
+            font-weight: 300;
+        }
+
+        /* Seção de Produtos */
+        .produtos-section {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .secao-titulo {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+            text-transform: uppercase;
+        }
+
+        .secao-titulo::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: var(--cor-destaque);
+            margin: 10px auto 0 auto;
+        }
+
+        .produtos-vitrine {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .produtos-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .produtos-vitrine p {
+            color: var(--cor-suave);
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+        }
+
+        /* Cartão do Vendedor (Denis) */
+        .vendedor-section {
+            background-color: #f0f0f0;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .vendedor-card {
+            background: white;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-top: 5px solid var(--cor-principal);
+        }
+
+        .vendedor-avatar {
+            width: 80px;
+            height: 80px;
+            background-color: #ddd;
+            color: var(--cor-suave);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 20px auto;
+        }
+
+        .vendedor-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: var(--cor-principal);
+        }
+
+        .vendedor-card .cargo {
+            color: var(--cor-destaque);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .vendedor-card .local {
+            font-size: 0.9rem;
+            color: var(--cor-suave);
+            margin-bottom: 25px;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            width: 100%;
+            transition: background-color 0.2s, transform 0.2s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            transform: scale(1.02);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--cor-principal);
+            color: #888888;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+        }
+
+        /* Responsividade Básica */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .nav-container { flex-direction: column; gap: 15px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo1.png" alt="Triflex Logo">
+            </div>
+            <a href="https://wa.me/c/268508722155535" target="_blank" class="btn-contato-topo">
+                <i class="fa-brands fa-whatsapp"></i> Catálogo Completo
+            </a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Componentes de Alta Performance</h1>
+        <p>Fabricação especializada em peças e insumos estruturais para cadeiras de escritório e operacionais. Qualidade que sustenta o seu negócio.</p>
+    </section>
+
+    <section class="produtos-section">
+        <h2 class="secao-titulo">Nossos Produtos</h2>
+        <div class="produtos-vitrine">
+            <img src="produtos1.png" alt="Modelos de cadeiras e componentes Triflex" class="produtos-img">
+            <p>Fornecemos braços, bases, mecanismos de regulagem, pistões e toda a linha estrutural necessária para montagem e manutenção industrial.</p>
+        </div>
+    </section>
+
+    <section class="vendedor-section">
+        <h2 class="secao-titulo">Fale com o Comercial</h2>
+        <div class="vendedor-card">
+            <div class="vendedor-avatar">
+                <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <h3>Denis Guarnieri</h3>
+            <div class="cargo">Promotor de Vendas | Triflex Brasil</div>
+            <div class="local"><i class="fa-solid fa-location-dot"></i> Mogi Mirim, SP, Brasil</div>
+            
+            <a href="https://wa.me/c/268508722155535" target="_blank" class="btn-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Triflex Brasil. Todos os direitos reservados.</p>
+        <p>Mogi Mirim - SP | Atendimento Atacadista e Corporativo</p>
+    </footer>
+
+</body>
+</html>
